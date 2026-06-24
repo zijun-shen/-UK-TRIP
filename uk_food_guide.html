@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>英國旅行吃飯小整理</title>
+<style>
+  :root{
+    --bg1:#fffaf0;
+    --bg2:#f7ecd8;
+    --paper:#fffdf8;
+    --cream:#fff8ec;
+    --cream2:#fff3dc;
+    --mint:#e6f2e7;
+    --mint-strong:#d9eadc;
+    --ink:#33291f;
+    --muted:#76695a;
+    --brown:#9a6a34;
+    --gold:#d7b36e;
+    --shadow:0 12px 30px rgba(96,66,31,.08);
+    --soft-shadow:0 8px 22px rgba(96,66,31,.055);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Noto Serif TC","Microsoft JhengHei",serif;
+    background:radial-gradient(circle at top,#fffefa 0%,var(--bg1) 42%,var(--bg2) 100%);
+    color:var(--ink);
+    line-height:1.72;
+  }
+  a{color:#8b6334;text-decoration:underline;text-underline-offset:3px;}
+  .wrap{max-width:1040px;margin:0 auto;padding:34px 18px 58px;}
+  .hero{
+    background:rgba(255,253,248,.97);
+    border-radius:30px;
+    padding:34px 28px;
+    box-shadow:var(--shadow);
+    text-align:center;
+  }
+  .eyebrow{letter-spacing:.16em;color:#a8783b;font-weight:800;font-size:.82rem;}
+  h1{margin:8px 0 8px;font-size:2.12rem;line-height:1.25;color:#2f4639;}
+  .subtitle{margin:0 auto;max-width:760px;color:var(--muted);font-size:1.04rem;}
+  .note{
+    margin:18px auto 0;
+    max-width:860px;
+    background:var(--mint);
+    border-radius:18px;
+    padding:10px 24px;
+    color:#4d634f;
+    font-size:.96rem;
+  }
+  .section-title{
+    margin:36px 0 14px;
+    padding-left:14px;
+    border-left:7px solid var(--gold);
+    color:#243d34;
+    font-size:1.48rem;
+    line-height:1.35;
+  }
+  .section-note{margin:-4px 0 15px;color:var(--muted);}
+
+  .chain-row{
+    display:grid;
+    grid-template-columns:86px 1fr 210px;
+    gap:18px;
+    align-items:center;
+    background:rgba(255,253,248,.96);
+    border-radius:22px;
+    padding:17px 18px;
+    margin:12px 0;
+    box-shadow:var(--soft-shadow);
+  }
+  .logo{
+    width:72px;height:72px;border-radius:18px;
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;font-family:Arial,sans-serif;font-weight:900;
+    line-height:1.06;letter-spacing:.01em;
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.04);
+  }
+  .farmer{background:#2b6e56;color:#fff;font-size:15px;}
+  .greggs{background:#0055a4;color:#ffd33d;font-size:14px;}
+  .pret{background:#92113e;color:#fff;font-size:15px;}
+  .waga{background:#111;color:#fff;font-size:12px;border-radius:50%;}
+  .dishoom{background:#fff;color:#111;font-size:13px;letter-spacing:.1em;}
+  .purezza{background:#fff;color:#111;font-size:13px;letter-spacing:.06em;}
+  .west{background:#f5bf45;color:#3b2a13;font-size:12px;}
+  .itsu{background:#fff1ec;color:#e7513e;font-size:18px;}
+  .maru{background:#fff;color:#d84b2a;font-size:12px;}
+  .leon{background:#fff;color:#f36d22;font-size:18px;}
+  .coop{background:#24b4d2;color:#fff;font-size:18px;}
+  .tesco{background:#fff;color:#00539f;font-size:16px;}
+  .sains{background:#f36c21;color:#fff;font-size:11px;}
+  .starbucks{background:#00704a;color:#fff;font-size:11px;border-radius:50%;}
+  .costa{background:#8b1e3f;color:#fff;font-size:13px;}
+  .wasabi{background:#fff;color:#477a34;font-size:14px;}
+  .card-title{font-size:1.22rem;margin:0 0 5px;line-height:1.35;color:#2d271f;}
+  .chain-text{margin:0;color:#4e4439;font-size:.96rem;}
+  .chain-text b{color:#2f4639;}
+  .point{
+    margin:0;
+    background:var(--mint);
+    color:#456047;
+    border-radius:17px;
+    padding:11px 13px;
+    font-size:.94rem;
+  }
+  .point b{display:block;color:#2f5f46;margin-bottom:2px;}
+
+  .day-card{
+    background:rgba(255,253,248,.97);
+    border-radius:26px;
+    box-shadow:var(--shadow);
+    padding:24px;
+    margin-bottom:22px;
+  }
+  .day-kicker{color:#a8783b;font-weight:800;letter-spacing:.06em;font-size:.9rem;margin-bottom:2px;}
+  .day-card h2{font-size:1.55rem;margin:0 0 8px;color:#243d34;line-height:1.35;}
+  .lead{margin:0 0 16px;color:#67594b;}
+  .info-line{margin:9px 0;color:#4e4439;}
+  .info-line b{color:#2f4639;}
+  .meal-list{display:grid;gap:12px;margin-top:14px;}
+
+  .meal-block{
+    position:relative;
+    background:#fffdf9;
+    border:1px solid rgba(154,106,52,.08);
+    border-radius:18px;
+    padding:18px 20px 18px 34px;
+    box-shadow:0 8px 20px rgba(80,60,30,.05);
+  }
+
+  .meal-block::before{
+    content:"";
+    position:absolute;
+    left:16px;
+    top:18px;
+    bottom:18px;
+    width:2px;
+    background:#97b19f;
+    border-radius:999px;
+  }
+
+  .meal-block:nth-child(3n+1)::before{background:#97b19f;}
+  .meal-block:nth-child(3n+2)::before{background:#a7bbb0;}
+  .meal-block:nth-child(3n)::before{background:#9db0c9;}
+
+  .meal-block h3{
+    margin:0 0 9px;
+    font-size:1.06rem;
+    color:#294339;
+    line-height:1.45;
+  }
+
+  .meal-block:nth-child(3n+1) h3{color:#536d5d;}
+  .meal-block:nth-child(3n+2) h3{color:#5d7268;}
+  .meal-block:nth-child(3n) h3{color:#667894;}
+
+  .meal-block p{
+    margin:7px 0;
+    color:#4e4439;
+  }
+
+  .meal-row{
+    display:flex;
+    align-items:flex-start;
+    gap:.35em;
+  }
+
+  .meal-row b{
+    flex:0 0 auto;
+    color:#2f4639;
+    white-space:nowrap;
+  }
+
+  .meal-row span{
+    flex:1;
+    min-width:0;
+  }
+
+  .meal-row a{
+    word-break:break-word;
+  }
+
+  .back-link{
+    text-align:center;
+    margin:16px 0 0;
+  }
+
+  .back-link a{
+    display:inline-block;
+    background:#fffdf8;
+    border:1px solid rgba(154,106,52,.16);
+    color:#8b6334;
+    border-radius:999px;
+    padding:8px 15px;
+    font-weight:800;
+    text-decoration:none;
+    box-shadow:0 6px 16px rgba(96,66,31,.055);
+  }
+
+.meal-mark{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:28px;height:28px;border-radius:999px;
+    background:#e6f2e7;color:#2f5f46;
+    font-size:.86rem;font-weight:900;margin-right:8px;
+    vertical-align:middle;
+  }
+  .pill{display:inline-block;background:#fff2c5;color:#7a5c22;border-radius:999px;padding:3px 10px;font-weight:800;font-size:.84rem;margin-bottom:8px;}
+  .mint-strip{
+    background:var(--mint);
+    color:#486149;
+    border-radius:18px;
+    padding:13px 16px;
+    margin-top:14px;
+  }
+  .footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:34px;}
+
+  @media(max-width:850px){
+    .chain-row{grid-template-columns:72px 1fr;gap:12px;}
+    .chain-row .point{grid-column:2;}
+    .logo{width:64px;height:64px;font-size:12px;}
+    h1{font-size:1.75rem;}
+  }
+
+  .day-restaurant-line{
+    margin:0 0 12px;
+    color:#243d34;
+    font-size:1.16rem;
+    line-height:1.45;
+    font-weight:800;
+  }
+  .day-restaurant-line .day-kicker-inline{
+    color:#c68a4b;
+    letter-spacing:.06em;
+    font-size:.88rem;
+    font-weight:900;
+  }
+  .day-restaurant-line .restaurant-name{
+    color:#243d34;
+    font-size:1.16rem;
+    font-weight:800;
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="hero">
+<div class="eyebrow">UK FOOD GUIDE</div>
+<h1>英國素食備用指南</h1>
+<p class="subtitle">行程累、臨時想吃熱食，或不想正式進餐廳時，可以用這一頁快速找連鎖店、超市、咖啡店與方便的素食選擇。</p>
+<div class="note"><div style="font-weight:700;margin-bottom:6px;">🌱 常見英文</div>Vegan/VG（全素）｜Vegetarian/V（蛋奶素）｜Plant-based（植物性料理）<br/>Dairy-free（不含乳製品）｜Oat Milk（燕麥奶）｜Soy Milk（豆奶）</div>
+</section><p class="back-link"><a href="uk_food_plan.html">← 回 Food Plan</a></p>
+<h2 class="section-title">英國國民連鎖店｜隨時隨地的熱食救星</h2>
+<p class="section-note">適合行程滿檔、想省錢、需要快速補給，或只是想吃一頓熱騰騰食物的時候。</p>
+<section class="chain-row">
+<div class="logo farmer">Farmer<br/>J</div>
+<div>
+<h3 class="card-title">Farmer J（熱食簡餐）</h3>
+<p class="chain-text"><b>特色：</b>非純素餐廳，但主打有機食材和熱食簡餐，可以選一份主食，再搭配冷熱蔬菜，對亞洲胃很友善。</p>
+<p class="chain-text"><b>推薦：</b>Build Your Own Bowl（自選熱食套餐）、Rice（米飯）、Tofu（豆腐）、Stir-fried Eggplant（炒茄子）、Roasted Sweet Potato（烤地瓜）。</p>
+</div>
+<p class="point"><b>重點</b>有米飯和熱菜，不想一直吃麵包時很適合。</p>
+</section>
+<section class="chain-row">
+<div class="logo greggs">GREGGS</div>
+<div>
+<h3 class="card-title">Greggs（英國國民麵包店）</h3>
+<p class="chain-text"><b>特色：</b>英國到處都是，車站、機場、街上都有，是便宜又方便的國民連鎖麵包店。</p>
+<p class="chain-text"><b>推薦：</b>Vegan Sausage Roll（純素香腸捲）、Vegan Sausage Breakfast Roll（純素早餐香腸麵包）、素甜點、咖啡。價格大概 £2～4。</p>
+</div>
+<p class="point"><b>重點</b>便宜、方便，很適合路上買了就走。</p>
+</section>
+<section class="chain-row">
+<div class="logo pret">PRET</div>
+<div>
+<h3 class="card-title">Pret A Manger（簡稱 Pret）</h3>
+<p class="chain-text"><b>特色：</b>倫敦街頭很密集的連鎖店，雖然不是純素店，但有清楚標示的熱食和輕食。</p>
+<p class="chain-text"><b>推薦：</b>Vegan Soup（純素熱湯）、Vegan Sandwich（純素三明治）、Falafel Wrap（法拉費蔬菜捲餅）、Plant Milk Coffee（植物奶咖啡）、Kale &amp; Cauli Macaroni Cheese（羽衣甘藍花椰菜焗起司通心粉）、Rich Garam Masala Lentil Soup（香濃印度加拉姆瑪薩拉扁豆湯）。</p>
+</div>
+<p class="point"><b>重點</b>早餐和午餐都很好解決，選擇很多。</p>
+</section>
+<section class="chain-row">
+<div class="logo waga">wagamama</div>
+<div>
+<h3 class="card-title">Wagamama（日式亞洲料理連鎖）</h3>
+<p class="chain-text"><b>特色：</b>日式、亞洲風味，素食選擇很多。</p>
+<p class="chain-text"><b>推薦：</b>Vegan Ramen（純素拉麵）、Vegan Curry（純素咖哩）、Yasai Katsu Curry（蔬菜炸排咖哩）、Vegan Gyoza（純素餃子）。</p>
+</div>
+<p class="point"><b>重點</b>想吃熱食的時候很安全，不怕只有冷三明治。</p>
+</section>
+<section class="chain-row">
+<div class="logo dishoom">DISHOOM</div>
+<div>
+<h3 class="card-title">Dishoom（印度料理連鎖）</h3>
+<p class="chain-text"><b>特色：</b>不是素食餐廳，但素食選擇很多，氣氛也很好。</p>
+<p class="chain-text"><b>推薦：</b>House Black Daal（招牌黑扁豆咖哩）、Chole（鷹嘴豆咖哩）、Paneer（印度起司）、Okra Fries（秋葵炸物）。</p>
+</div>
+<p class="point"><b>重點</b>可以留到愛丁堡吃，當作比較正式的一餐。</p>
+</section>
+<section class="chain-row">
+<div class="logo purezza">PUREZZA</div>
+<div>
+<h3 class="card-title">Purezza（全素披薩）</h3>
+<p class="chain-text"><b>特色：</b>100% Vegan，主打純素披薩和義式料理。</p>
+<p class="chain-text"><b>推薦：</b>Vegan Pizza（純素披薩）、Vegan Cheese（純素起司）、Pasta（義大利麵）、Dessert（甜點）。</p>
+</div>
+<p class="point"><b>重點</b>如果剛好附近有分店，可以排一餐；不用特地繞很遠。</p>
+</section>
+<section class="chain-row">
+<div class="logo west">WEST<br/>CORNWALL</div>
+<div>
+<h3 class="card-title">West Cornwall Pasty Co（英式鹹派）</h3>
+<p class="chain-text"><b>特色：</b>Pasty 是英國康沃爾的傳統鹹派，像以前礦工帶進礦坑的熱便當，很多車站都能看到。</p>
+<p class="chain-text"><b>推薦：</b>Vegan ‘Steakless’ Pasty（純素無牛肉鹹派）。</p>
+</div>
+<p class="point"><b>重點</b>想嚐鮮英式食物可以試試，拿著吃也方便。</p>
+</section>
+<section class="chain-row">
+<div class="logo itsu">itsu</div>
+<div>
+<h3 class="card-title">itsu（亞洲風輕食）</h3>
+<p class="chain-text"><b>特色：</b>Pret 的姐妹品牌，主打健康的亞洲風味料理，想吃熱湯、麵食時很方便。</p>
+<p class="chain-text"><b>推薦：</b>Veggie Gyoza Noodle Bowl（蔬菜煎餃烏龍麵湯碗）、Vegetable Gyoza（蔬菜餃子）、Rice Bowl（米飯碗）。</p>
+</div>
+<p class="point"><b>重點</b>台灣清淡口味比較容易習慣，臨時要吃飯很安全。</p>
+</section>
+<section class="chain-row">
+<div class="logo maru">MARUGAME<br/>UDON</div>
+<div>
+<h3 class="card-title">Marugame Udon（丸亀製麵）</h3>
+<p class="chain-text"><b>特色：</b>亞洲人熟悉的品牌，直接提供熱騰騰的現做麵食，適合不習慣冷食的時候。</p>
+<p class="chain-text"><b>推薦：</b>Pumpkin Katsu Curry Udon（南瓜咖哩烏龍麵）、Vegetable Tempura（蔬菜天婦羅）。</p>
+</div>
+<p class="point"><b>重點</b>靠近國家藝廊也有據點，很適合市中心行程。</p>
+</section>
+<section class="chain-row">
+<div class="logo leon">LEON</div>
+<div>
+<h3 class="card-title">LEON（地中海健康簡餐）</h3>
+<p class="chain-text"><b>特色：</b>主打健康、快速的地中海式簡餐店，很多大火車站都有分店。</p>
+<p class="chain-text"><b>推薦：</b>Brazilian Black Beans（巴西黑豆飯）、Small Grilled Halloumi Wrap（烤哈羅米起司捲）。</p>
+</div>
+<p class="point"><b>重點</b>想吃比較健康、快速的熱食時很方便。</p>
+</section>
+<section class="chain-row">
+<div class="logo wasabi">Wasabi</div>
+<div>
+<h3 class="card-title">Wasabi（日式便當／壽司）</h3>
+<p class="chain-text"><b>特色：</b>日式便當、壽司連鎖，適合想吃米飯時。</p>
+<p class="chain-text"><b>推薦：</b>Sushi（壽司）、Rice Bowl（飯碗）、Curry（咖哩）、Bento（便當），通常有素食選項。</p>
+</div>
+<p class="point"><b>重點</b>吃膩麵包時，這家會比較像正餐。</p>
+</section>
+<h2 class="section-title">英國常見超市與咖啡店｜不想正式吃飯時很好用</h2>
+<p class="section-note">適合買簡單早餐、晚餐、零食或飲料。旅館附近、車站附近通常都找得到。</p>
+<section class="chain-row">
+<div class="logo coop">co<br/>op</div>
+<div>
+<h3 class="card-title">Co-op（合作超市）</h3>
+<p class="chain-text"><b>特色：</b>英國常見小超市，適合買簡單晚餐、早餐或零食。</p>
+<p class="chain-text"><b>可找：</b>Sandwich（三明治）、Salad（沙拉）、Yogurt（優格）、Fruit（水果）、Biscuits（餅乾）、Drinks（飲料），也常有素食標示。</p>
+</div>
+<p class="point"><b>重點</b>不想坐下吃飯時，買回旅館最方便。</p>
+</section>
+<section class="chain-row">
+<div class="logo tesco">TESCO</div>
+<div>
+<h3 class="card-title">Tesco Express</h3>
+<p class="chain-text"><b>特色：</b>小型超市，很多分店開在車站或街角，臨時補食物很方便。</p>
+<p class="chain-text"><b>可找：</b>Meal Deal（超市套餐：主食＋零食＋飲料）、Vegetarian Sandwich（素三明治）、Salad（沙拉）、Fruit（水果）、Crisps（洋芋片）、Drinks（飲料）。</p>
+</div>
+<p class="point"><b>重點</b>便宜又快速，適合臨時補食物。</p>
+</section>
+<section class="chain-row">
+<div class="logo sains">SAINSBURY</div>
+<div>
+<h3 class="card-title">Sainsbury’s Local</h3>
+<p class="chain-text"><b>特色：</b>也是常見小超市，市中心很容易遇到。</p>
+<p class="chain-text"><b>可找：</b>Vegetarian Sandwich（素食三明治）、Salad（沙拉）、Soup（湯品）、Fruit（水果）、Breakfast Bread（早餐麵包）。</p>
+</div>
+<p class="point"><b>重點</b>跟 Tesco 很像，看到哪間近就進哪間。</p>
+</section>
+<section class="chain-row">
+<div class="logo starbucks">STAR<br/>BUCKS</div>
+<div>
+<h3 class="card-title">Starbucks</h3>
+<p class="chain-text"><b>特色：</b>咖啡店，適合休息、充電、買早餐。</p>
+<p class="chain-text"><b>可找：</b>Plant Milk Coffee（植物奶咖啡）、Cake（蛋糕）、Breakfast Bread（早餐麵包），有些分店有 Vegetarian Sandwich（素食三明治）。</p>
+</div>
+<p class="point"><b>重點</b>到處都有，累了可以休息一下。</p>
+</section>
+<section class="chain-row">
+<div class="logo costa">COSTA</div>
+<div>
+<h3 class="card-title">Costa Coffee</h3>
+<p class="chain-text"><b>特色：</b>英國常見咖啡連鎖，比 Starbucks 更在地一點。</p>
+<p class="chain-text"><b>可找：</b>Coffee（咖啡）、Tea（茶）、Cake（蛋糕）、Sandwich（三明治）、簡單熱食。</p>
+</div>
+<p class="point"><b>重點</b>適合早餐或下午休息，不用特別排隊找餐廳。</p>
+</section>
+<div class="footer">UK Vegetarian Backup Guide</div>
+</main>
+</body>
+</html>
