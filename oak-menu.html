@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OAK Sample Menu - 中英對照菜單</title>
+    <style>
+        :root {
+            --bg-color: #fcfbfa;
+            --text-main: #2b2b2b;
+            --text-sub: #666666;
+            --accent: #5a6b5c; /* 蔬食文青風的暗綠色調 */
+            --border-color: #e5e2dd;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Microsoft JhengHei";
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-radius: 8px;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            letter-spacing: 2px;
+            margin: 0;
+            text-transform: uppercase;
+            color: var(--text-main);
+        }
+
+        .header h2 {
+            font-size: 18px;
+            font-weight: normal;
+            color: var(--accent);
+            margin: 5px 0 0 0;
+        }
+
+        .time-info {
+            font-size: 12px;
+            color: var(--text-sub);
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .menu-item {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-weight: 500;
+        }
+
+        .en-title {
+            font-size: 15px;
+            padding-right: 15px;
+        }
+
+        .price {
+            font-size: 15px;
+            font-family: "Courier New", Courier, monospace;
+            white-space: nowrap;
+        }
+
+        .zh-title {
+            font-size: 14px;
+            color: var(--text-sub);
+            margin-top: 2px;
+            font-weight: normal;
+        }
+
+        .feast-box {
+            border: 1px solid var(--accent);
+            padding: 20px;
+            background-color: #f7f8f6;
+            margin-top: 40px;
+            border-radius: 4px;
+        }
+
+        .feast-box .item-row {
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        .feast-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .feast-list li {
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .feast-list li span {
+            display: block;
+            color: var(--text-sub);
+            font-size: 12px;
+        }
+
+        .divider {
+            text-align: center;
+            color: var(--accent);
+            margin: 10px 0;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="header">
+        <h1>OAK</h1>
+        <h2>SAMPLE MENU | 參考菜單</h2>
+    </div>
+
+    <!-- 單點區 -->
+    <div class="section-title">À la carte | 單點</div>
+    <div class="time-info">(Available 12-2:30pm // 5:30pm-9:30pm | 供應時間：中午 12:00-14:30 // 晚上 17:30-21:30)</div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">Nocella olives</span><span class="price">4.95</span></div>
+        <div class="zh-title">諾切拉綠橄欖</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">Spiced almonds</span><span class="price">4.75</span></div>
+        <div class="zh-title">香料杏仁</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">House pickles, cashew cream</span><span class="price">6.75</span></div>
+        <div class="zh-title">自製醃菜佐腰果鮮奶油</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">Homemade bread</span><span class="price">4.95</span></div>
+        <div class="zh-title">自製手工麵包</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">OAK Garden salad</span><span class="price">5.45</span></div>
+        <div class="zh-title">OAK 花園沙拉</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">Soup of the day</span><span class="price">7.75</span></div>
+        <div class="zh-title">今日主廚例湯</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">Moong dahl fritters, garlic chutney</span><span class="price">9.75</span></div>
+        <div class="zh-title">綠豆仁炸丸子佐大蒜酸辣醬</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">OAK Hummus with Tunisian harissa, garden herbs and crispy chickpeas</span><span class="price">9.95</span></div>
+        <div class="zh-title">OAK 鷹嘴豆泥佐突尼西亞哈里薩辣醬、花園香草與酥脆鷹嘴豆</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">Bromham carrots, smoked almond butter, chilli crisp</span><span class="price">11.95</span></div>
+        <div class="zh-title">布羅姆漢姆胡蘿蔔佐煙燻杏仁奶油、香脆辣椒醬</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">Wye Valley asparagus, nettle chimichurri, sunflower seed butter</span><span class="price">11.95</span></div>
+        <div class="zh-title">懷伊谷蘆筍佐蕁麻阿根廷青醬、葵花籽奶油</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">Chicory salad with homemade ricotta, apple, hazelnut, OAK mustard</span><span class="price">11.50</span></div>
+        <div class="zh-title">苦苣沙拉佐自製里考塔起司、蘋果、榛果與 OAK 特製芥末醬</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">Leek risotto, hazelnuts, Old Winchester</span><span class="price">14.95</span></div>
+        <div class="zh-title">韭蔥燉飯佐榛果與老溫徹斯特起司</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">Cannellini beans, celeriac, cashew, pangrattato</span><span class="price">14.95</span></div>
+        <div class="zh-title">白豆（白腎豆）佐根芹菜、腰果與香脆麵包屑</div>
+    </div>
+
+    <div class="menu-item">
+        <div class="item-row"><span class="en-title">Homemade ricotta agnolotti, Fairy Hill broad beans, Old Winchester</span><span class="price">15.95</span></div>
+        <div class="zh-title">自製里考塔起司義式枕頭包（義大利餃）佐仙女山蠶豆與老溫徹斯特起司</div>
+    </div>
+
+
+    <!-- 五道式饗宴 -->
+    <div class="feast-box">
+        <div class="item-row" style="border:none; margin:0;"><span class="en-title" style="font-size:16px; font-weight:bold; color:var(--accent);">OAK Five Course Feast</span><span class="price" style="font-size:16px; font-weight:bold;">£55</span></div>
+        <div class="zh-title" style="font-size:14px; margin-bottom:5px; font-weight:bold;">OAK 精選五道式饗宴套餐</div>
+        
+        <div class="item-row" style="border:none; margin:0;"><span class="en-title" style="font-size:13px; color:var(--text-sub);">+ Wine to match</span><span class="price" style="font-size:13px; color:var(--text-sub);">£27</span></div>
+        <div class="zh-title" style="font-size:12px; margin-bottom:15px; font-style:italic;">（加購精選佐餐葡萄酒）</div>
+        
+        <div class="time-info" style="text-align:left; margin-bottom:15px;">(Available 5:30pm - 9:30pm | 僅限晚間 17:30-21:30 供應)</div>
+        
+        <ul class="feast-list">
+            <li>
+                Nocella olives, spiced almonds
+                <span>諾切拉綠橄欖 與 香料杏仁</span>
+            </li>
+            <div class="divider">◆</div>
+            <li>
+                House pickles, cashew cream
+                <span>自製醃菜佐腰果鮮奶油</span>
+            </li>
+            <div class="divider">◆</div>
+            <li>
+                Soup of the day
+                <span>今日主廚例湯</span>
+            </li>
+            <div class="divider">◆</div>
+            <li>
+                OAK Hummus with Tunisian harissa, garden herbs and crispy chickpeas<br>
+                Wye Valley asparagus, nettle chimichurri, sunflower seed butter<br>
+                Bromham carrots, smoked almond butter, chilli crisp<br>
+                OAK garden salad
+                <span>
+                    OAK 鷹嘴豆泥、懷伊谷蘆筍、<br>布羅姆漢姆胡蘿蔔 與 OAK 花園沙拉
+                </span>
+            </li>
+            <div class="divider">◆</div>
+            <li>
+                Leek risotto, hazelnuts, Old Winchester <br><b style="color:var(--accent); font-size:12px;">OR</b><br> Ricotta agnolotti, Fairy Hill broad beans, Old Winchester
+                <span>韭蔥燉飯 或是 里考塔起司義式枕頭包（二選一）</span>
+            </li>
+            <div class="divider">◆</div>
+            <li>
+                Dark chocolate tart, sourdough ice cream
+                <span>黑巧克力塔佐酸麵包冰淇淋</span>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="back-link" style="text-align:center;margin:32px 0 16px;">
+  <a href="uk_food_plan.html" style="display:inline-block;background:#fffdf8;border:1px solid rgba(154,106,52,.16);color:#8b6334;border-radius:999px;padding:8px 20px;font-weight:800;text-decoration:none;box-shadow:0 6px 16px rgba(96,66,31,.055);">← 回餐廳選單</a>
+</div>
+</body>
+</html>

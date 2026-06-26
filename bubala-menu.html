@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bubala — 中英對照菜單</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5F0E8;
+    --sand: #E8DFD0;
+    --ink: #1C1A17;
+    --charcoal: #3D3830;
+    --olive: #6B7355;
+    --rust: #A85C38;
+    --muted: #8A8070;
+    --divider: #D4C9B8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+
+  /* ── Header ── */
+  header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 600;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--ink);
+    line-height: 1;
+  }
+
+  .brand-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+
+  .header-rule {
+    width: 40px;
+    border: none;
+    border-top: 1px solid var(--rust);
+    margin: 20px auto;
+  }
+
+  /* ── Section title ── */
+  .section-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--olive);
+    margin-bottom: 20px;
+    margin-top: 48px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--divider);
+  }
+
+  /* ── Menu item ── */
+  .item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--divider);
+    align-items: start;
+  }
+
+  .item:last-child { border-bottom: none; }
+
+  .item-names { grid-column: 1; }
+
+  .en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--charcoal);
+    line-height: 1.3;
+  }
+
+  .zh {
+    font-size: 19px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .badge {
+    font-size: 10px;
+    color: var(--olive);
+    letter-spacing: 1px;
+    margin-left: 5px;
+    font-style: italic;
+  }
+
+  .price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--rust);
+    white-space: nowrap;
+    grid-column: 2;
+    text-align: right;
+    padding-top: 2px;
+  }
+
+  /* ── Set menu box ── */
+  .set-box {
+    background: #fff;
+    border: 1px solid var(--divider);
+    border-radius: 4px;
+    padding: 28px 24px;
+    margin-top: 48px;
+  }
+
+  .set-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--divider);
+    padding-bottom: 14px;
+    margin-bottom: 22px;
+  }
+
+  .set-title-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .set-title-zh {
+    font-size: 17px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .set-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--rust);
+    font-weight: 600;
+  }
+
+  .set-course {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--divider);
+  }
+
+  .set-course:last-child { border-bottom: none; }
+
+  .set-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    color: var(--charcoal);
+  }
+
+  .set-zh {
+    font-size: 18px;
+    color: var(--muted);
+    margin-top: 1px;
+  }
+
+  .dot-divider {
+    text-align: center;
+    color: var(--olive);
+    font-size: 10px;
+    letter-spacing: 4px;
+    padding: 6px 0;
+  }
+
+  /* ── Drinks ── */
+  .wine-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--divider);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0 16px;
+  }
+
+  .wine-item:last-child { border-bottom: none; }
+
+  .wine-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--charcoal);
+  }
+
+  .wine-desc {
+    font-size: 17px;
+    color: var(--muted);
+    margin-top: 2px;
+    font-style: italic;
+  }
+
+  .wine-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    color: var(--rust);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* ── Cocktail ── */
+  .cocktail-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--divider);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0 16px;
+  }
+  .cocktail-item:last-child { border-bottom: none; }
+
+  .cocktail-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--charcoal);
+  }
+
+  .cocktail-zh { font-size: 18px; color: var(--muted); margin-top: 2px; }
+  .cocktail-desc { font-size: 16px; color: var(--muted); font-style: italic; margin-top: 2px; }
+
+  /* ── Notes ── */
+  .legend {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 12px;
+    line-height: 2;
+    letter-spacing: 0.3px;
+  }
+
+  /* ── Annotation block ── */
+  .annotations {
+    margin-top: 64px;
+    border-top: 2px solid var(--olive);
+    padding-top: 32px;
+  }
+
+  .annotations-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .annotations-sub {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+
+  .note {
+    margin-bottom: 28px;
+  }
+
+  .note-term {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--rust);
+    margin-bottom: 4px;
+  }
+
+  .note-en {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .note-body {
+    font-size: 18px;
+    color: var(--charcoal);
+    line-height: 1.8;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="brand">Bubala</div>
+    <div class="brand-sub">King's Cross · Middle Eastern Vegetarian</div>
+    <hr class="header-rule">
+    <div class="brand-sub">中英對照菜單 · 所有料理均為純素（Vegan），標示 v 者為植物五辛素／含蛋奶，ngf 者含麩質</div>
+  </header>
+
+  <!-- À la carte -->
+  <div class="section-label">À la carte · 單點</div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Pickle plate</div>
+      <div class="zh">醃菜拼盤</div>
+    </div>
+    <div class="price">5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Crudités</div>
+      <div class="zh">生蔬條</div>
+    </div>
+    <div class="price">3.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Laffa <span class="badge">ngf</span></div>
+      <div class="zh">拉法麵包（含麩質）</div>
+    </div>
+    <div class="price">3</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Labneh, confit garlic & za'atar <span class="badge">v</span></div>
+      <div class="zh">黎巴嫩優格起司佐油封大蒜與百里香香料</div>
+    </div>
+    <div class="price">8.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Hummus, burnt butter <span class="badge">v</span></div>
+      <div class="zh">鷹嘴豆泥佐焦化奶油</div>
+    </div>
+    <div class="price">8.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Hummus, mango, lime leaf</div>
+      <div class="zh">鷹嘴豆泥佐芒果、萊姆葉</div>
+    </div>
+    <div class="price">8.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Peach & green tomato ezme, tahini</div>
+      <div class="zh">水蜜桃與青番茄土耳其醬佐芝麻醬</div>
+    </div>
+    <div class="price">9</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Baba ganoush, curry leaf oil, pine nuts <span class="badge">*</span></div>
+      <div class="zh">煙燻茄子醬佐咖哩葉油、松子</div>
+    </div>
+    <div class="price">9.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Oyster mushroom skewer</div>
+      <div class="zh">鮮蠔菇串燒</div>
+    </div>
+    <div class="price">5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Celeriac Shawarma skewer</div>
+      <div class="zh">根芹菜沙瓦瑪串燒 ★</div>
+    </div>
+    <div class="price">5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Falafel, tahini, amba, sumac onions</div>
+      <div class="zh">炸鷹嘴豆丸佐芝麻醬、芒果醃醬、漆樹洋蔥</div>
+    </div>
+    <div class="price">10</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Smacked cucumbers, tahini, chilli crunch</div>
+      <div class="zh">拍黃瓜佐芝麻醬、香脆辣椒 ★</div>
+    </div>
+    <div class="price">11</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Watermelon, Carasello, black olive, feta <span class="badge">v</span></div>
+      <div class="zh">西瓜佐卡拉塞洛瓜、黑橄欖、菲達起司</div>
+    </div>
+    <div class="price">11.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Halloumi, chamomile & fennel honey <span class="badge">v</span></div>
+      <div class="zh">哈羅米起司佐洋甘菊茴香蜂蜜</div>
+    </div>
+    <div class="price">13</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Round courgette, Chraime, ricotta, rosemary <span class="badge">v</span></div>
+      <div class="zh">圓形櫛瓜佐北非辣番茄醬、里考塔起司、迷迭香</div>
+    </div>
+    <div class="price">17</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Spring cabbage, baharat, date, tahini <span class="badge">ngf</span></div>
+      <div class="zh">春季高麗菜佐巴哈拉特綜合香料、椰棗、芝麻醬</div>
+    </div>
+    <div class="price">17</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Red pepper 'Muhammara', yogurt <span class="badge">v</span></div>
+      <div class="zh">紅椒穆罕瑪拉醬佐優格</div>
+    </div>
+    <div class="price">17</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Romaine lettuce, pumpkin seed, shallot, sorrel</div>
+      <div class="zh">蘿蔓生菜佐南瓜籽、紅蔥頭、酸模葉 ★</div>
+    </div>
+    <div class="price">8.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Confit potato latkes, toum <span class="badge">v</span></div>
+      <div class="zh">油封馬鈴薯薄餅佐黎巴嫩蒜泥醬</div>
+    </div>
+    <div class="price">8.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Batata harra</div>
+      <div class="zh">黎巴嫩香辣炸馬鈴薯</div>
+    </div>
+    <div class="price">9.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Cuore del Vesuvio tomato, olive, green harissa</div>
+      <div class="zh">維蘇威番茄佐橄欖、綠哈里薩辣醬</div>
+    </div>
+    <div class="price">9.5</div>
+  </div>
+
+  <div class="legend">
+    v ＝ 植物五辛素／含蛋奶　ngf ＝ 含麩質　* ＝ 可要求無堅果版本<br>
+    ★ ＝ 頁面下方有食材說明
+  </div>
+
+  <!-- Set Menu -->
+  <div class="set-box">
+    <div class="set-header">
+      <div>
+        <div class="set-title-en">Bubala Knows Best</div>
+        <div class="set-title-zh">主廚精選分享套餐・每人</div>
+      </div>
+      <div class="set-price">£39</div>
+    </div>
+
+    <div class="set-course">
+      <div class="set-en">Pickle plate · Laffa bread</div>
+      <div class="set-zh">醃菜拼盤・拉法麵包</div>
+    </div>
+    <div class="dot-divider">· · ·</div>
+    <div class="set-course">
+      <div class="set-en">Labneh, confit garlic, za'atar</div>
+      <div class="set-zh">黎巴嫩優格起司佐油封大蒜與百里香香料</div>
+    </div>
+    <div class="dot-divider">· · ·</div>
+    <div class="set-course">
+      <div class="set-en">Hummus, burnt butter</div>
+      <div class="set-zh">鷹嘴豆泥佐焦化奶油</div>
+    </div>
+    <div class="dot-divider">· · ·</div>
+    <div class="set-course">
+      <div class="set-en">Oyster mushroom skewer</div>
+      <div class="set-zh">鮮蠔菇串燒</div>
+    </div>
+    <div class="dot-divider">· · ·</div>
+    <div class="set-course">
+      <div class="set-en">Smacked cucumbers, tahini, chilli crunch</div>
+      <div class="set-zh">拍黃瓜佐芝麻醬、香脆辣椒 ★</div>
+    </div>
+    <div class="dot-divider">· · ·</div>
+    <div class="set-course">
+      <div class="set-en">Halloumi, chamomile & fennel honey</div>
+      <div class="set-zh">哈羅米起司佐洋甘菊茴香蜂蜜</div>
+    </div>
+    <div class="dot-divider">· · ·</div>
+    <div class="set-course">
+      <div class="set-en">Round courgette, Chraime, ricotta, rosemary</div>
+      <div class="set-zh">圓形櫛瓜佐北非辣番茄醬、里考塔起司、迷迭香</div>
+    </div>
+    <div class="dot-divider">· · ·</div>
+    <div class="set-course">
+      <div class="set-en">Romaine lettuce, pumpkin seed, shallot, sorrel</div>
+      <div class="set-zh">蘿蔓生菜佐南瓜籽、紅蔥頭、酸模葉 ★</div>
+    </div>
+    <div class="dot-divider">· · ·</div>
+    <div class="set-course">
+      <div class="set-en">Confit potato latkes, toum</div>
+      <div class="set-zh">油封馬鈴薯薄餅佐黎巴嫩蒜泥醬</div>
+    </div>
+  </div>
+
+  <!-- Cocktails -->
+  <div class="section-label">Cocktails · 調酒</div>
+
+  <div class="cocktail-item">
+    <div>
+      <div class="cocktail-en">Pomegranate Sour</div>
+      <div class="cocktail-zh">石榴酸酒</div>
+      <div class="cocktail-desc">ELLC gin, pomegranate molasses, angostura bitters</div>
+    </div>
+    <div class="price">12.5</div>
+  </div>
+
+  <div class="cocktail-item">
+    <div>
+      <div class="cocktail-en">Orange Blossom Spritz</div>
+      <div class="cocktail-zh">橙花氣泡調酒</div>
+      <div class="cocktail-desc">High Fidelity triple sec, orange blossom, prosecco</div>
+    </div>
+    <div class="price">12.5</div>
+  </div>
+
+  <div class="cocktail-item">
+    <div>
+      <div class="cocktail-en">Sour Cherry Negroni</div>
+      <div class="cocktail-zh">酸櫻桃內格羅尼</div>
+      <div class="cocktail-desc">ELLC gin, vermouth, select aperitivo, sour cherry</div>
+    </div>
+    <div class="price">13</div>
+  </div>
+
+  <div class="cocktail-item">
+    <div>
+      <div class="cocktail-en">Pickletini <span class="badge">v</span></div>
+      <div class="cocktail-zh">醃菜馬丁尼</div>
+      <div class="cocktail-desc">ELLC vodka, vermouth, pickle brine</div>
+    </div>
+    <div class="price">13.5</div>
+  </div>
+
+  <div class="cocktail-item">
+    <div>
+      <div class="cocktail-en">Bubie's Spicy Marg</div>
+      <div class="cocktail-zh">辣味瑪格麗特</div>
+      <div class="cocktail-desc">Tequila, cointreau, jalapeño shatta, lime, agave</div>
+    </div>
+    <div class="price">13.5</div>
+  </div>
+
+  <div class="cocktail-item">
+    <div>
+      <div class="cocktail-en">Cucumber Smack 0.0% <span class="badge">v</span></div>
+      <div class="cocktail-zh">黃瓜無酒精調酒</div>
+      <div class="cocktail-desc">Botivo, fresh chilli, ginger & cucumber</div>
+    </div>
+    <div class="price">8.5</div>
+  </div>
+
+  <!-- White Wine -->
+  <div class="section-label">White Wine · 白酒</div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Signus, Vinho Verde</div>
+      <div class="wine-desc">清爽帶微氣泡 — 葡萄牙米尼奧</div>
+    </div>
+    <div class="wine-price">7.5 / 38</div>
+  </div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Las Mesas Blanco, Verdejo</div>
+      <div class="wine-desc">乾型，柑橘與輕盈鳳梨香 — 西班牙拉曼查</div>
+    </div>
+    <div class="wine-price">8 / 42</div>
+  </div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Kate Sauvignon Blanc</div>
+      <div class="wine-desc">香茅與異國柑橘香 — 法國朗格多克</div>
+    </div>
+    <div class="wine-price">9 / 46</div>
+  </div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Terroir de Roche, Riesling</div>
+      <div class="wine-desc">萊姆、青蘋果，高酸度 — 法國阿爾薩斯</div>
+    </div>
+    <div class="wine-price">52</div>
+  </div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Mâcon-Igé "Les Condemines", Chardonnay</div>
+      <div class="wine-desc">梨子與烤檸檬，清爽多汁 — 法國勃根地</div>
+    </div>
+    <div class="wine-price">59</div>
+  </div>
+
+  <!-- Orange Wine -->
+  <div class="section-label">Orange Wine · 橙酒</div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Parajes del Valle, Macabeo Maceración</div>
+      <div class="wine-desc">橘子、哈密瓜與新鮮柑橘 — 西班牙胡米亞</div>
+    </div>
+    <div class="wine-price">6.5 / 45</div>
+  </div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Thalia Orange, Viognier</div>
+      <div class="wine-desc">橘子、水蜜桃與忍冬，帶鹹鮮尾韻 — 法國朗格多克</div>
+    </div>
+    <div class="wine-price">10.5 / 52</div>
+  </div>
+
+  <!-- Sparkling -->
+  <div class="section-label">Sparkling · 氣泡酒</div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Blanc de Blancs Brut</div>
+      <div class="wine-desc">輕盈清爽，柑橘與青蘋果 — 義大利威尼托</div>
+    </div>
+    <div class="wine-price">8 / 42</div>
+  </div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Nyetimber Classic Cuvée</div>
+      <div class="wine-desc">烤蘋果、布里歐許，綿密細緻 — 英國南部</div>
+    </div>
+    <div class="wine-price">70</div>
+  </div>
+
+  <!-- Gazoz -->
+  <div class="section-label">Gazoz · 氣泡飲</div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Sumac lemonade</div>
+      <div class="zh">漆樹檸檬水</div>
+    </div>
+    <div class="price">7</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Peach Tea</div>
+      <div class="zh">水蜜桃茶</div>
+    </div>
+    <div class="price">7</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Mango & Aleppo</div>
+      <div class="zh">芒果與阿勒坡辣椒</div>
+    </div>
+    <div class="price">7</div>
+  </div>
+
+  <!-- Red Wine -->
+  <div class="section-label">Red Wine · 紅酒</div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Embrujo, Tempranillo</div>
+      <div class="wine-desc">紅黑果香，輕微辛香，單寧柔順 — 西班牙拉曼查</div>
+    </div>
+    <div class="wine-price">7.5 / 39</div>
+  </div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Touraine, KM 4700, Gamay</div>
+      <div class="wine-desc">明亮酸紅果，清爽尾韻 — 法國羅亞爾河谷</div>
+    </div>
+    <div class="wine-price">8.5 / 43</div>
+  </div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Haute Piste, Pinot Noir</div>
+      <div class="wine-desc">飽滿櫻桃，溫柔辛香 — 法國朗格多克</div>
+    </div>
+    <div class="wine-price">47</div>
+  </div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Cascina Lanzarotti, Nebbiolo</div>
+      <div class="wine-desc">結構感強，草莓與乾燥香草 — 義大利皮埃蒙特</div>
+    </div>
+    <div class="wine-price">10.5 / 52</div>
+  </div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Panisse Crozes-Hermitage, Syrah</div>
+      <div class="wine-desc">經典煙燻莓果，單寧圓潤 — 法國北隆河</div>
+    </div>
+    <div class="wine-price">60</div>
+  </div>
+
+  <!-- Rosé -->
+  <div class="section-label">Rosé · 粉紅酒</div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Question d'Equilibre</div>
+      <div class="wine-desc">清新草莓與柑橘皮香 — 法國朗格多克</div>
+    </div>
+    <div class="wine-price">7.5 / 39</div>
+  </div>
+
+  <div class="wine-item">
+    <div>
+      <div class="wine-en">Cuvée Prestige Côtes de Provence</div>
+      <div class="wine-desc">優雅細緻，野莓與白桃，尾韻悠長 — 法國普羅旺斯</div>
+    </div>
+    <div class="wine-price">10 / 50</div>
+  </div>
+
+  <!-- Beer -->
+  <div class="section-label">Bottled Beer · 瓶裝啤酒</div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Braybrooke Pilsner Lager 4.5%</div>
+      <div class="zh">皮爾森拉格啤酒</div>
+    </div>
+    <div class="price">6.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Partizan Pale Ale 4.5%</div>
+      <div class="zh">淡色愛爾啤酒</div>
+    </div>
+    <div class="price">6.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Nirvana IPA 0.05%</div>
+      <div class="zh">無酒精 IPA</div>
+    </div>
+    <div class="price">5.5</div>
+  </div>
+
+  <!-- Dessert -->
+  <div class="section-label">Dessert · 甜點</div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Coconut & tahini fudge</div>
+      <div class="zh">椰子芝麻醬軟糖</div>
+    </div>
+    <div class="price">4</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Salted caramel truffles <span class="badge">v</span></div>
+      <div class="zh">鹽味焦糖松露巧克力</div>
+    </div>
+    <div class="price">4.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Saffron malabi, pistachio, pomegranate <span class="badge">*</span></div>
+      <div class="zh">番紅花奶凍佐開心果、石榴</div>
+    </div>
+    <div class="price">8</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Chocolate crémeux, tahini, cocoa nib <span class="badge">v</span></div>
+      <div class="zh">巧克力奶凍佐芝麻醬、可可碎粒</div>
+    </div>
+    <div class="price">9</div>
+  </div>
+
+  <!-- Hot Drinks -->
+  <div class="section-label">Hot Drinks · 熱飲</div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Filter coffee</div>
+      <div class="zh">濾滴咖啡</div>
+    </div>
+    <div class="price">2.5</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Lemongrass & ginger tea</div>
+      <div class="zh">檸檬草薑茶</div>
+    </div>
+    <div class="price">2</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Green tea</div>
+      <div class="zh">綠茶</div>
+    </div>
+    <div class="price">2</div>
+  </div>
+
+  <div class="item">
+    <div class="item-names">
+      <div class="en">Fresh mint tea</div>
+      <div class="zh">新鮮薄荷茶</div>
+    </div>
+    <div class="price">2</div>
+  </div>
+
+  <!-- Old Fashioned -->
+  <div class="section-label">Dessert Cocktail · 甜點調酒</div>
+
+  <div class="cocktail-item">
+    <div>
+      <div class="cocktail-en">Old Fashioned</div>
+      <div class="cocktail-zh">古典雞尾酒</div>
+      <div class="cocktail-desc">Bourbon, bitters, sugar and orange peel</div>
+    </div>
+    <div class="price">15</div>
+  </div>
+
+  <!-- ── Annotations ── -->
+  <div class="annotations">
+    <div class="annotations-title">食材小教室</div>
+    <div class="annotations-sub">★ 標示菜色的補充說明</div>
+
+    <div class="note">
+      <div class="note-term">根芹菜沙瓦瑪串燒</div>
+      <div class="note-en">Celeriac Shawarma Skewer</div>
+      <div class="note-body">
+        沙瓦瑪（Shawarma）是中東傳統的直立旋轉烤肉方式，通常以羊肉或雞肉製作。這道菜將根芹菜（Celeriac）醃製後以同樣的香料手法串燒，模仿沙瓦瑪的風味與口感。根芹菜質地紮實、帶有輕微堅果香，是蔬食料理中常見的「肉感替代食材」，外觀類似馬鈴薯，但吃起來更有層次。
+      </div>
+    </div>
+
+    <div class="note">
+      <div class="note-term">拍黃瓜</div>
+      <div class="note-en">Smacked Cucumbers</div>
+      <div class="note-body">
+        這道菜借用了中式涼拌「拍黃瓜」的做法——用刀身或重物將黃瓜拍裂，使其表面凹凸不平，更容易吸附醬汁、入味更深。在一間中東餐廳出現這道菜，是一個有趣的文化混搭：中式技法 × 中東芝麻醬與辣椒脆，反而成為店內的人氣招牌之一。
+      </div>
+    </div>
+
+    <div class="note">
+      <div class="note-term">酸模葉</div>
+      <div class="note-en">Sorrel</div>
+      <div class="note-body">
+        酸模（Sorrel）是一種葉菜，外形略似菠菜或山蘇，但味道明顯偏酸、帶有清新的果酸感，常見於法式料理與北歐料理。台灣較不常見，口感上可以想像成「帶果香的酸菠菜」或「非常酸的芝麻葉」。用在沙拉裡主要是為了提供自然的酸度，取代醋或檸檬的作用。
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Bubala King's Cross · 1 Cadence Court, Lewis Cubitt Park, N1C 4ED<br>
+    bubala.co.uk/kings-cross
+  </footer>
+
+</div>
+<div class="back-link" style="text-align:center;margin:32px 0 16px;">
+  <a href="uk_food_plan.html" style="display:inline-block;background:#fffdf8;border:1px solid rgba(154,106,52,.16);color:#8b6334;border-radius:999px;padding:8px 20px;font-weight:800;text-decoration:none;box-shadow:0 6px 16px rgba(96,66,31,.055);">← 回餐廳選單</a>
+</div>
+</body>
+</html>
