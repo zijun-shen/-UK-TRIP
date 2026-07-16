@@ -107,6 +107,55 @@
       padding: 13px 15px; margin: 12px 0;
     }
 
+    .wash-card {
+      background: #fdf4f7;
+      border: 1px solid #ecccd8;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin: 14px 0 0;
+    }
+    .wash-when {
+      font-weight: 700;
+      color: var(--card-rose);
+      font-size: 16px;
+      letter-spacing: .02em;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #efd5de;
+    }
+    .wash-grid {
+      display: grid;
+      grid-template-columns: 78px 1fr;
+      gap: 7px 10px;
+      align-items: baseline;
+      font-size: 16px;
+    }
+    .wash-grid > span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .wash-alt {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed #e8c4d1;
+    }
+    .wash-alt-label {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    @media (max-width: 640px) {
+      .wash-grid { grid-template-columns: 68px 1fr; gap: 6px 8px; font-size: 15px; }
+    }
+
+    .al { display: flex; align-items: baseline; gap: 0; margin: 4px 0; }
+    .al > .al-k { flex: none; }
+    .al > .al-v { flex: 1; min-width: 0; }
+    @media (max-width: 640px) {
+      .al { display: block; }
+      .al > .al-k { display: inline; }
+    }
+
     footer { margin-top: 28px; color: var(--muted); text-align: center; font-size: 14px; }
     footer a { color: var(--pink-btn); font-weight: 700; text-decoration: none; }
 
@@ -173,6 +222,37 @@
 <li>洗衣袋</li>
 <li>裝髒衣服的袋子</li>
 </ul>
+<div class="wash-card">
+<div class="wash-when">第一次　7/29（三）或 7/30（四）　曼徹斯特</div>
+<div class="wash-grid">
+<span>名稱</span><div><b>DropMe my Laundry</b></div>
+<span>方式</span><div>到飯店收送，不用出門</div>
+<span>價錢</span><div>約 £18–20（7–8 公斤）</div>
+<span>WhatsApp</span><div>+44 7404 295689</div>
+<span>時間</span><div>週一至週六 09:00–20:00　<b>週日公休</b></div>
+</div>
+</div>
+
+<div class="wash-card">
+<div class="wash-when">第二次　8/3（一）　一到愛丁堡就洗</div>
+<div class="wash-grid">
+<span>名稱</span><div><b>Whisky Laundromat</b></div>
+<span>地址</span><div>7 Jeffrey Street, EH1 1DR（走路 5 分鐘）</div>
+<span>價錢</span><div>約 £30 一籃，洗＋烘＋折全包，2 小時好　<b>只收信用卡</b></div>
+<span>電話</span><div>+44 131 563 3357</div>
+<span>時間</span><div>天天開，抓 09:00–19:00 最保險</div>
+</div>
+<div class="wash-alt">
+<div class="wash-alt-label">想省錢的話（要自己顧機器、自己折）</div>
+<div class="wash-grid">
+<span>名稱</span><div><b>Ace Cleaning Centre</b></div>
+<span>地址</span><div>13 South Clerk Street, EH8 9JD（走路 15 分鐘）</div>
+<span>價錢</span><div>約 £11（洗 £8＋烘 £3）　<b>只收現金</b></div>
+<span>電話</span><div>+44 131 667 0549</div>
+<span>時間</span><div>8/3 是週一，08:00–14:00、15:00–19:30　<b>週四公休</b></div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="pack-card">
