@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>英國行前行李整理｜Packing List</title>
+<style>
+    :root {
+      --bg: #f7f3ec; --card: #ffffff; --ink: #2b2b2b; --muted: #6b625b;
+      --line: #eddbe1; --accent: #8c2f4f; --accent-soft: #fbecf0;
+      --pink-line: #e6b3c4; --pink-btn: #a03a5d;
+      --card-rose: #a83d69;
+      --red: #7a1533; --red-soft: #fff1f4;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+      background: linear-gradient(180deg, #FFFDF6 0%, #FFFFFF 100%);
+      color: var(--ink); line-height: 1.75;
+    }
+    .page { width: min(980px, 92vw); margin: 0 auto; padding: 32px 0 56px; }
+
+    .back-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-bottom: 16px;
+      padding: 8px 14px; border-radius: 999px;
+      background: #ffffff; border: 1px solid var(--pink-line);
+      color: var(--pink-btn); font-size: 14px; font-weight: 800;
+      text-decoration: none;
+    }
+    .back-link:hover { background: var(--accent-soft); }
+
+    header {
+      background: var(--card); border: 1px solid var(--line); border-radius: 24px;
+      padding: 30px; box-shadow: 0 10px 24px rgba(61, 46, 31, 0.05);
+      margin-bottom: 24px; position: relative; overflow: hidden;
+    }
+    header::after {
+      content: "PACK"; position: absolute; right: 28px; bottom: -18px;
+      color: rgba(140, 47, 79, 0.10); font-size: 96px; font-weight: 800; letter-spacing: 4px;
+    }
+    h1 { margin: 0 0 8px; color: var(--accent); font-size: clamp(28px, 5vw, 42px); line-height: 1.15; }
+    .subtitle { color: var(--muted); font-size: 17px; margin: 0; }
+    .notice {
+      margin: 22px 0 0; padding: 16px 18px; border-radius: 16px;
+      background: var(--accent-soft); border: 1px solid var(--pink-line); position: relative; z-index: 1;
+    }
+    .notice strong { color: var(--accent); }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px; padding: 7px 11px; border-radius: 999px;
+      background: #ffffff; border: 1px solid var(--pink-line); color: var(--pink-btn); font-size: 14px; font-weight: 700;
+    }
+
+    .section-title {
+      margin: 30px 0 14px; color: var(--card-rose); font-size: 22px;
+      border-left: 6px solid var(--card-rose); padding-left: 12px;
+    }
+
+    .pack-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--card-rose);
+      border-radius: 18px;
+      padding: 18px 22px;
+      margin: 14px 0;
+      box-shadow: 0 7px 18px rgba(61, 46, 31, 0.06);
+    }
+    .pack-card h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      color: var(--card-rose);
+      display: flex; align-items: center; gap: 9px;
+    }
+    .pack-card h3::before {
+      content: ""; width: 9px; height: 9px; border-radius: 50%;
+      background: var(--card-rose); flex: none;
+    }
+    .pack-card p { margin: 0 0 10px; }
+    .pack-card p:last-child { margin-bottom: 0; }
+    .pack-card b { background: linear-gradient(transparent 62%, #fbdde8 62%); font-weight: 700; }
+
+    .pack-card ul { list-style: none; margin: 8px 0 0; padding: 0; }
+    .pack-card li { margin: 7px 0; padding-left: 27px; position: relative; }
+    .pack-card li::before {
+      content: ""; position: absolute; left: 0; top: 8px;
+      width: 15px; height: 15px; border: 2px solid var(--card-rose);
+      border-radius: 4px; background: #fff;
+    }
+    .pack-card li small { color: var(--muted); font-weight: 500; }
+
+    .pack-card.alert {
+      background: var(--red-soft);
+      border-color: #dfa2b3;
+      border-left: 10px solid var(--red);
+      box-shadow: 0 7px 22px rgba(122, 21, 51, 0.14);
+    }
+    .pack-card.alert h3 { color: var(--red); }
+    .pack-card.alert h3::before { background: var(--red); }
+    .pack-card.alert li::before { border-color: var(--red); }
+    .pack-card.alert b { background: linear-gradient(transparent 62%, #f2c6d1 62%); }
+    .shout {
+      display: block;
+      border: 2px solid var(--red); border-radius: 12px;
+      background: var(--red); color: #fff; font-weight: 800; font-size: 17px;
+      padding: 13px 15px; margin: 12px 0;
+    }
+
+    footer { margin-top: 28px; color: var(--muted); text-align: center; font-size: 14px; }
+    footer a { color: var(--pink-btn); font-weight: 700; text-decoration: none; }
+
+    @media print {
+      body { background: #fff; } .page { width: 100%; padding: 0; }
+      header, .pack-card { box-shadow: none; break-inside: avoid; }
+      .back-link { display: none; }
+    }
+    @media (max-width: 640px) {
+      .page { width: 94vw; padding-top: 16px; }
+      header { padding: 22px; border-radius: 20px; }
+      .pack-card { padding: 16px 18px; }
+    }
+</style>
+</head>
+<body>
+<main class="page">
+
+<a class="back-link" href="index.html">← 回到英國行程 Part 1</a>
+
+<header>
+<h1>行前行李整理</h1>
+<p class="subtitle">2026/7/22（三）– 2026/8/10（一）｜倫敦・曼徹斯特・湖區・愛丁堡・蘇格蘭高地</p>
+<div class="notice">
+<strong>🧳 準備原則</strong>
+<div class="chips">
+<span class="chip">每人 8 天份衣物</span>
+<span class="chip">旅途中洗兩次衣服</span>
+<span class="chip">行李箱留空間</span>
+<span class="chip">重要物品分開放</span>
+</div>
+</div>
+</header>
+
+<h2 class="section-title">行李清單</h2>
+
+<section class="pack-card">
+<h3>衣物</h3>
+<p>每人帶<b>大約 8 天份</b>就好。七月底到八月初，倫敦約 14～24°C、愛丁堡約 11～19°C、蘇格蘭高地約 9～18°C，山區可能更冷。</p>
+<ul>
+<li>薄長袖外套</li>
+<li><b>防風防水外套</b></li>
+<li>較保暖的衣物</li>
+<li>去蘇格蘭高地要帶<b>保暖帽</b></li>
+</ul>
+</section>
+
+<section class="pack-card">
+<h3>鞋子</h3>
+<ul>
+<li>舒適、適合長時間走路的鞋</li>
+<li>健行鞋</li>
+<li>飯店健身房用的室內運動鞋</li>
+</ul>
+<p style="margin-top:12px"><b>鞋子要先穿習慣，不要帶全新的鞋。</b></p>
+</section>
+
+<section class="pack-card">
+<h3>洗衣用品</h3>
+<p>旅途中<b>預計洗兩次衣服</b>。</p>
+<ul>
+<li>洗衣膠囊（兩次份）</li>
+<li>洗衣袋</li>
+<li>裝髒衣服的袋子</li>
+</ul>
+</section>
+
+<section class="pack-card">
+<h3>雨具與防曬用品</h3>
+<ul>
+<li>折傘</li>
+<li>帽子</li>
+<li>太陽眼鏡</li>
+<li>防曬乳</li>
+</ul>
+<p style="margin-top:12px">蘇格蘭風雨較大，<b>主要依靠防風防水外套</b>。</p>
+</section>
+
+<section class="pack-card">
+<h3>藥品與隨身用品</h3>
+<p><b>平常固定服用的藥一定要帶足，最好多準備幾天，並保留原包裝。</b></p>
+<ul>
+<li>備用眼鏡</li>
+<li>止痛藥</li>
+<li>腸胃藥</li>
+<li>暈車藥</li>
+<li>口罩</li>
+<li>防磨腳貼</li>
+</ul>
+</section>
+
+<section class="pack-card">
+<h3>盥洗用品</h3>
+<ul>
+<li><b>牙刷、牙膏</b><small>（英國飯店通常不提供）</small></li>
+<li>洗面乳（旅行裝）</li>
+<li>保養品（旅行裝）</li>
+<li>梳子</li>
+</ul>
+<p style="margin-top:12px"><b>不要帶大瓶的東西</b>，英國 Boots、Superdrug 到處都是，缺什麼當場買。</p>
+</section>
+
+<section class="pack-card">
+<h3>電子用品</h3>
+<ul>
+<li><b>英國轉接頭</b><small>（已備）</small></li>
+<li>充電器、充電線</li>
+<li>行動電源</li>
+</ul>
+<p style="margin-top:12px"><b>行動電源要放在隨身行李，不可以托運。</b></p>
+</section>
+
+<section class="pack-card">
+<h3>隨身行李要放什麼</h3>
+<ul>
+<li>護照</li>
+<li>ETA 資料</li>
+<li>機票與住宿資料</li>
+<li>旅遊保險資料</li>
+<li>藥品、眼鏡</li>
+<li>手機、錢包、行動電源</li>
+<li><b>每人一套替換衣物</b></li>
+</ul>
+</section>
+
+<section class="pack-card">
+<h3>其他實用品</h3>
+<ul>
+<li><b>3 天份泡麵</b><small>（蘇格蘭高地素食餐廳不好找）</small></li>
+<li><b>泡麵杯</b></li>
+<li>水壺</li>
+<li>面紙、濕紙巾</li>
+<li>環保購物袋</li>
+<li>可折疊的備用袋</li>
+</ul>
+</section>
+
+<section class="pack-card alert">
+<h3>安全建議</h3>
+<p>在人多的地方、車站和街上使用手機時，<b>要注意四周</b>。</p>
+<span class="shout">避免站在馬路邊或把手機伸得太外面，以免手機被搶。</span>
+<p><b>手機不用時要立刻收進有拉鍊的包包</b>；護照和錢包<b>不要放在外套口袋</b>或容易被打開的地方。</p>
+</section>
+
+<section class="pack-card">
+<h3>行李整理原則</h3>
+<p><b>不要帶 20 天份的衣服</b>，行李箱最好保留一些空間。</p>
+<p><b>兩人的重要物品和衣服可以分開放</b>，避免其中一個行李箱延誤時完全沒有東西可用。</p>
+</section>
+
+<footer>英國行前行李整理｜2026/7/22 – 8/10　·　<a href="index.html">回到行程 Part 1</a></footer>
+
+</main>
+</body>
+</html>

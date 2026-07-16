@@ -337,6 +337,45 @@
 .guard-card p:first-child { color: #6b5330; font-weight: 800; }
 </style>
 
+<style>
+    .pack-link-card {
+      margin: 16px 0 0;
+      padding: 15px 16px;
+      border-radius: 18px;
+      background: #fdeef3;
+      border: 1px solid #f0bcd0;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .pack-link-card div {
+      color: #a83d69;
+      font-weight: 700;
+    }
+    .pack-link-card small {
+      display: block;
+      color: #b8708e;
+      font-weight: 500;
+      margin-top: 2px;
+    }
+    .pack-link-card a {
+      white-space: nowrap;
+      display: inline-block;
+      background: #ffffff;
+      border: 1px solid #f0bcd0;
+      color: #c94f7c;
+      border-radius: 999px;
+      padding: 8px 13px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+    @media (max-width: 640px) {
+      .pack-link-card { flex-direction: column; align-items: flex-start; }
+    }
+</style>
 </head>
 <body>
 <main class="page">
@@ -352,7 +391,9 @@
 <span class="chip">8/3–8/9 愛丁堡</span>
 <span class="chip">8/9–8/10 倫敦回台</span>
 </div>
-</div><div class="food-link-card"><div>🥗 英國素食吃飯小整理<small>連鎖店、超市、咖啡店與每日餐廳安排</small></div><a href="uk_food_plan.html">打開 Food Plan</a></div>
+</div>
+<div class="pack-link-card"><div>🧳 行前行李整理<small>衣物、藥品、隨身行李與安全提醒</small></div><a href="packing.html">打開行李清單 →</a></div>
+<div class="food-link-card"><div>🥗 英國素食吃飯小整理<small>連鎖店、超市、咖啡店與每日餐廳安排</small></div><a href="uk_food_plan.html">打開 Food Plan</a></div>
 <div class="part-link-card"><div>GB Part 2｜Lake District • Edinburgh • Highlands<small>湖區・愛丁堡・蘇格蘭高地・倫敦回台（8/1–8/10）</small></div><a href="part2.html">進入 Part 2 →</a></div>
 </header>
 <h2 class="section-title">每日行程</h2>
