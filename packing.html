@@ -107,53 +107,52 @@
       padding: 13px 15px; margin: 12px 0;
     }
 
-    .wash-card {
-      background: #fdf4f7;
-      border: 1px solid #ecccd8;
-      border-radius: 12px;
-      padding: 14px 16px;
-      margin: 14px 0 0;
-    }
-    .wash-when {
-      font-weight: 700;
-      color: var(--card-rose);
-      font-size: 16px;
-      letter-spacing: .02em;
-      padding-bottom: 8px;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #efd5de;
-    }
-    .wash-grid {
-      display: grid;
-      grid-template-columns: 78px 1fr;
-      gap: 7px 10px;
-      align-items: baseline;
-      font-size: 16px;
-    }
-    .wash-grid > span {
-      color: var(--muted);
-      font-size: 14px;
-    }
-    .wash-alt {
-      margin-top: 14px;
-      padding-top: 12px;
-      border-top: 1px dashed #e8c4d1;
-    }
-    .wash-alt-label {
-      color: var(--muted);
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-    @media (max-width: 640px) {
-      .wash-grid { grid-template-columns: 68px 1fr; gap: 6px 8px; font-size: 15px; }
-    }
 
-    .al { display: flex; align-items: baseline; gap: 0; margin: 4px 0; }
-    .al > .al-k { flex: none; }
-    .al > .al-v { flex: 1; min-width: 0; }
-    @media (max-width: 640px) {
-      .al { display: block; }
-      .al > .al-k { display: inline; }
+
+    .laundry-plan {
+      margin-top: 18px;
+      display: grid;
+      gap: 16px;
+    }
+    .laundry-box {
+      background: #fff7fa;
+      border: 1px solid #edc7d4;
+      border-radius: 16px;
+      padding: 16px;
+    }
+    .laundry-title {
+      margin: 0 0 12px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f0d7df;
+      color: var(--card-rose);
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: .02em;
+    }
+    .laundry-grid {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 9px 12px;
+      align-items: start;
+    }
+    .laundry-label {
+      color: var(--muted);
+      font-weight: 500;
+    }
+    .laundry-value {
+      color: var(--ink);
+    }
+    .laundry-value strong {
+      background: linear-gradient(transparent 62%, #f6cbd8 62%);
+    }
+    .laundry-alt {
+      margin: 16px 0 10px;
+      padding-top: 14px;
+      border-top: 1px dotted #edc7d4;
+      color: var(--muted);
+    }
+    @media (max-width: 520px) {
+      .laundry-grid { grid-template-columns: 68px 1fr; }
     }
 
     footer { margin-top: 28px; color: var(--muted); text-align: center; font-size: 14px; }
@@ -182,7 +181,6 @@
 <div class="notice">
 <strong>🧳 準備原則</strong>
 <div class="chips">
-<span class="chip">辦好國際漫遊 20 天流量</span>
 <span class="chip">每人 8 天份衣物</span>
 <span class="chip">旅途中洗兩次衣服</span>
 <span class="chip">行李箱留空間</span>
@@ -197,6 +195,7 @@
 <h3>衣物</h3>
 <p>每人帶<b>大約 8 天份</b>就好。七月底到八月初，倫敦約 14～24°C、愛丁堡約 11～19°C、蘇格蘭高地約 9～18°C，山區可能更冷。</p>
 <ul>
+<li><b>長袖上衣 3～4 件</b></li>
 <li>薄長袖外套</li>
 <li><b>防風防水外套</b></li>
 <li>較保暖的衣物</li>
@@ -222,36 +221,35 @@
 <li>洗衣袋</li>
 <li>裝髒衣服的袋子</li>
 </ul>
-<div class="wash-card">
-<div class="wash-when">第一次　7/29（三）或 7/30（四）　曼徹斯特</div>
-<div class="wash-grid">
-<span>名稱</span><div><b>DropMe my Laundry</b></div>
-<span>方式</span><div>到飯店收送，不用出門</div>
-<span>價錢</span><div>約 £18–20（7–8 公斤）</div>
-<span>WhatsApp</span><div>+44 7404 295689</div>
-<span>時間</span><div>週一至週六 09:00–20:00　<b>週日公休</b></div>
-</div>
-</div>
-
-<div class="wash-card">
-<div class="wash-when">第二次　8/3（一）　一到愛丁堡就洗</div>
-<div class="wash-grid">
-<span>名稱</span><div><b>Whisky Laundromat</b></div>
-<span>地址</span><div>7 Jeffrey Street, EH1 1DR（走路 5 分鐘）</div>
-<span>價錢</span><div>約 £30 一籃，洗＋烘＋折全包，2 小時好　<b>只收信用卡</b></div>
-<span>電話</span><div>+44 131 563 3357</div>
-<span>時間</span><div>天天開，抓 09:00–19:00 最保險</div>
-</div>
-<div class="wash-alt">
-<div class="wash-alt-label">想省錢的話（要自己顧機器、自己折）</div>
-<div class="wash-grid">
-<span>名稱</span><div><b>Ace Cleaning Centre</b></div>
-<span>地址</span><div>13 South Clerk Street, EH8 9JD（走路 15 分鐘）</div>
-<span>價錢</span><div>約 £11（洗 £8＋烘 £3）　<b>只收現金</b></div>
-<span>電話</span><div>+44 131 667 0549</div>
-<span>時間</span><div>8/3 是週一，08:00–14:00、15:00–19:30　<b>週四公休</b></div>
-</div>
-</div>
+<div class="laundry-plan">
+  <div class="laundry-box">
+    <div class="laundry-title">第一次　7/29（三）或 7/30（四）　曼徹斯特</div>
+    <div class="laundry-grid">
+      <div class="laundry-label">名稱</div><div class="laundry-value"><strong>DropMe my Laundry</strong></div>
+      <div class="laundry-label">方式</div><div class="laundry-value">到飯店收送，不用出門</div>
+      <div class="laundry-label">價錢</div><div class="laundry-value">約 £18–20（7–8 公斤）</div>
+      <div class="laundry-label">WhatsApp</div><div class="laundry-value">+44 7404 295689</div>
+      <div class="laundry-label">時間</div><div class="laundry-value">週一至週六 09:00–20:00　<strong>週日公休</strong></div>
+    </div>
+  </div>
+  <div class="laundry-box">
+    <div class="laundry-title">第二次　8/3（一）　一到愛丁堡就洗</div>
+    <div class="laundry-grid">
+      <div class="laundry-label">名稱</div><div class="laundry-value"><strong>Whisky Laundromat</strong></div>
+      <div class="laundry-label">地址</div><div class="laundry-value">7 Jeffrey Street, EH1 1DR（走路 5 分鐘）</div>
+      <div class="laundry-label">價錢</div><div class="laundry-value">約 £30 一籃，洗＋烘＋折全包，2 小時好　<strong>只收信用卡</strong></div>
+      <div class="laundry-label">電話</div><div class="laundry-value">+44 131 563 3357</div>
+      <div class="laundry-label">時間</div><div class="laundry-value">天天開，抓 09:00–19:00 最保險</div>
+    </div>
+    <div class="laundry-alt">想省錢的話（要自己顧機器、自己折）</div>
+    <div class="laundry-grid">
+      <div class="laundry-label">名稱</div><div class="laundry-value"><strong>Ace Cleaning Centre</strong></div>
+      <div class="laundry-label">地址</div><div class="laundry-value">13 South Clerk Street, EH8 9JD（走路 15 分鐘）</div>
+      <div class="laundry-label">價錢</div><div class="laundry-value">約 £11（洗 £8＋烘 £3）　<strong>只收現金</strong></div>
+      <div class="laundry-label">電話</div><div class="laundry-value">+44 131 667 0549</div>
+      <div class="laundry-label">時間</div><div class="laundry-value">8/3 是週一，08:00–14:00、15:00–19:30　<strong>週四公休</strong></div>
+    </div>
+  </div>
 </div>
 </section>
 
@@ -259,6 +257,7 @@
 <h3>雨具與防曬用品</h3>
 <ul>
 <li>折傘</li>
+<li><b>輕便雨衣</b></li>
 <li>帽子</li>
 <li>太陽眼鏡</li>
 <li>防曬乳</li>
@@ -293,7 +292,6 @@
 <section class="pack-card">
 <h3>電子用品</h3>
 <ul>
-<li><b>國際漫遊</b><small>（出發前辦好 20 天流量）</small></li>
 <li><b>英國轉接頭</b><small>（已備）</small></li>
 <li>充電器、充電線</li>
 <li>行動電源</li>
