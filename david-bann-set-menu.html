@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>David Bann 套餐菜單</title>
+<style>
+  :root {
+    --ink: #2b2420;
+    --paper: #f7f2e9;
+    --line: #cdbfa3;
+    --accent: #6a7b52;
+    --muted: #8a7c66;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Noto Serif TC", "Songti TC", Georgia, serif;
+    line-height: 1.6;
+    padding: 40px 20px 60px;
+  }
+  .menu {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  header {
+    text-align: center;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--ink);
+    margin-bottom: 8px;
+  }
+  header h1 {
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-weight: 600;
+  }
+  header .en {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--muted);
+    letter-spacing: 2px;
+    margin-top: 4px;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 1.35rem;
+    letter-spacing: 6px;
+    color: var(--accent);
+    margin: 40px 0 20px;
+    position: relative;
+  }
+  .section-title::before,
+  .section-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 1px;
+    background: var(--line);
+  }
+  .section-title::before { left: 15%; }
+  .section-title::after { right: 15%; }
+  .item {
+    padding: 14px 0;
+    border-bottom: 1px dotted var(--line);
+  }
+  .item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .item h3 .en {
+    display: block;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  .item p {
+    font-size: 0.95rem;
+    color: #4d443a;
+    margin-top: 4px;
+  }
+  .tag {
+    display: inline-block;
+    font-family: Georgia, sans-serif;
+    font-size: 0.7rem;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+    padding: 1px 6px;
+    margin-left: 6px;
+    vertical-align: middle;
+    letter-spacing: 1px;
+  }
+  .scoops {
+    columns: 2;
+    column-gap: 30px;
+    font-size: 0.95rem;
+    margin-top: 8px;
+    list-style: none;
+  }
+  .scoops li { padding: 2px 0; break-inside: avoid; }
+  .scoops li::before { content: "· "; color: var(--accent); }
+  .legend {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .legend div { margin: 3px 0; }
+  .price {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+  }
+  .price strong { color: var(--accent); }
+
+  .back-link { text-align:center; margin:0 0 24px; }
+  .back-link a {
+    display:inline-block; color:var(--muted); text-decoration:none;
+    border:1px solid var(--line, var(--divider)); border-radius:999px;
+    padding:7px 14px; font-size:.82rem; letter-spacing:.04em;
+    background:rgba(255,255,255,.55);
+  }
+  .back-link a:hover { color:var(--accent, var(--rust)); }
+</style>
+</head>
+<body>
+<div class="menu"><div class="back-link"><a href="uk_food_plan.html">← 回 Food Plan</a></div>
+<header>
+<h1>David Bann 套餐菜單</h1>
+<div class="en">David Bann — Group Set Menu</div>
+</header>
+<div class="section-title">前菜 Starters</div>
+<div class="item">
+<h3>湯品<span class="en">Soup</span></h3>
+<p>自製麵包，香草特級初榨橄欖油。今日湯品請詢問服務人員。<span class="tag">(V)</span><span class="tag">(NGCI)</span></p>
+</div>
+<div class="item">
+<h3>哈吉斯炸物<span class="en">Haggis Fritters</span></h3>
+<p>本店自製哈吉斯，香蕉甜酸醬，酸奶油佐細香蔥。</p>
+</div>
+<div class="item">
+<h3>油酥塔<span class="en">Shortcrust Tart</span></h3>
+<p>Delaforce 白波特酒焦糖洋蔥與蘆筍，Millbrook 乳品公司熟成切達乳酪、鮮乳凝乳、綜合生菜、醃蘿蔔。</p>
+</div>
+<div class="item">
+<h3>自製鷹嘴豆泥<span class="en">Homemade Hummus</span></h3>
+<p>佐番茄甜酸醬與自製麵包。<span class="tag">V</span><span class="tag">(NGCI)</span></p>
+</div>
+<div class="section-title">主菜 Mains</div>
+<div class="item">
+<h3>蘆筍櫛瓜燉飯<span class="en">Asparagus &amp; Courgette Risotto</span></h3>
+<p>白腰豆、櫛瓜羅勒奶醬、乳品公司熟成切達乳酪、瑞可塔乳酪、松子、香草油。<span class="tag">(V)</span><span class="tag">NGCI</span></p>
+</div>
+<div class="item">
+<h3>哈吉斯<span class="en">Haggis</span></h3>
+<p>小馬鈴薯、燉蕪菁泥、威士忌洋蔥肉汁、嫩莖花椰菜。<span class="tag">V</span><span class="tag">NGCI</span></p>
+</div>
+<div class="item">
+<h3>烏龍麵<span class="en">Udon Noodles</span></h3>
+<p>特選有機小麥麵條、炒時蔬、毛豆、新鮮薑、蒜、辣椒、香料、黑芝麻、番茄、招牌煙燻豆腐。<span class="tag">V</span></p>
+</div>
+<div class="item">
+<h3>二次烘烤布丁<span class="en">Double-Baked Pudding</span></h3>
+<p>豌豆、薄荷與 Isle of Kintyre 煙燻乳酪、玉米粥羅勒脆片、胡蘿蔔絲絨濃湯、烤櫛瓜。<span class="tag">NGCI</span></p>
+</div>
+<div class="section-title">甜點 Desserts</div>
+<div class="item">
+<h3>油酥餅塔<span class="en">Shortcake Pastry Tart</span></h3>
+<p>烘烤馬斯卡彭乳酪、大黃、薑、巧克力冰淇淋。</p>
+</div>
+<div class="item">
+<h3>香草奶酪<span class="en">Vanilla Pannacotta</span></h3>
+<p>蘇格蘭草莓、羅勒、萊姆、蛋白霜。<span class="tag">NGCI</span></p>
+</div>
+<div class="item">
+<h3>蘋果太妃糖布丁<span class="en">Apple Sticky Toffee Pudding</span></h3>
+<p>奶油太妃醬、蜜糖胡桃、蘋果、肉桂與蘋果白蘭地冰淇淋。<span class="tag">V</span></p>
+</div>
+<div class="item">
+<h3>芒果杯<span class="en">Mango Verrine</span></h3>
+<p>鳳梨覆盆子果泥、檸檬椰子瑪德蓮、蘭姆椰子雪酪。<span class="tag">V</span><span class="tag">(NGCI)</span></p>
+</div>
+<div class="item">
+<h3>自製冰淇淋<span class="en">Homemade Ice Cream</span></h3>
+<p>任選三球：<span class="tag">NGCI</span></p>
+<ul class="scoops">
+<li>巧克力</li>
+<li>香草</li>
+<li>覆盆子</li>
+<li>薑與萊姆</li>
+<li>蘋果、肉桂、蘋果白蘭地 <span class="tag">V</span></li>
+<li>鳳梨雪酪 <span class="tag">V</span></li>
+<li>椰子蘭姆雪酪 <span class="tag">V</span></li>
+<li>甜菜根、椰子與威士忌冰淇淋 <span class="tag">V</span></li>
+<li>黑莓與迷迭香雪酪 <span class="tag">V</span></li>
+</ul>
+</div>
+<div class="legend">
+<div><strong>NGCI</strong> — 不含麩質成分 Non gluten containing ingredients</div>
+<div><strong>(NGCI)</strong> — 可要求製作為不含麩質成分 on request</div>
+<div><strong>V</strong> — 純素 Vegan</div>
+<div><strong>(V)</strong> — 可要求製作為純素 Vegan on request</div>
+</div>
+<div class="price">
+    兩道菜 <strong>£26.50</strong> ・ 三道菜 <strong>£34.00</strong>
+</div>
+</div>
+</body>
+</html>
