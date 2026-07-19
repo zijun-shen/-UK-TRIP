@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>英國行程 Part 2｜Lake District & Scotland</title>
+<title>英國行程 Part 2｜Lake District &amp; Scotland</title>
 <style>
     :root {
       --bg: #f7f3ec; --card: #ffffff; --ink: #2b2b2b; --muted: #6b625b;
@@ -283,7 +283,6 @@
     }
 
 </style>
-
 <style>
   #day4 .hc-hanging {
     padding-left: 18.5em;
@@ -297,6 +296,26 @@
   }
 </style>
 
+<style id="day13-time-row-fix">
+  /* Day 13: keep wrapped itinerary text aligned after the time separator. */
+  .day-card .timeplan .time-row {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: 0;
+    align-items: start;
+  }
+  .day-card .timeplan .time-label {
+    white-space: nowrap;
+  }
+  .day-card .timeplan .time-detail {
+    min-width: 0;
+  }
+  @media (max-width: 640px) {
+    .day-card .timeplan .time-row {
+      grid-template-columns: max-content minmax(0, 1fr);
+    }
+  }
+</style>
 </head>
 <body>
 <main class="page">
@@ -377,7 +396,28 @@
 <p>這天第一次抵達愛丁堡，重點是先感受蘇格蘭首都的舊城氣氛。城堡、石造街道和皇家一英里會讓人一到就覺得很有歷史感。</p>
 </div>
 <p class="hotel"><b>住宿：</b>Motel One Edinburgh-Royal</p>
-<div class="journey">
+<div class="transport">
+<p><b>🚤 上午遊湖安排｜Red Cruise</b></p>
+<p>搭乘 10:15 從 Bowness 出發的 Red Cruise，10:45 抵達 Ambleside；在碼頭短暫停留後，搭 11:00 回程船，11:30 返回 Bowness。</p>
+<p>這天不安排在 Ambleside 進城或中途下船，以免影響 13:07 的火車。建議先在官網買好來回票，當天提早約 20 分鐘到碼頭取票或掃碼上船即可。</p>
+</div><div class="timeplan">
+<p><b>⏰ 當天詳細時間表</b></p>
+<p class="time-row"><span class="time-label">08:00–08:40｜</span><span class="time-detail">在 Autumn Leaves Guest House 吃早餐。房型本身為 Room Only；若尚未加購，可前一晚詢問住宿是否能另外準備早餐與素食餐點。</span></p>
+<p class="time-row"><span class="time-label">08:40–09:20｜</span><span class="time-detail">回房整理行李、退房，直接把行李寄放在住宿。退房與寄放一起處理，不需要另外安排一段時間。</span></p>
+<p class="time-row"><span class="time-label">09:25｜</span><span class="time-detail">若選擇步行，從 Autumn Leaves Guest House 出發，前往 Bowness Pier 約需 30–35 分鐘。</span></p>
+<p class="time-row"><span class="time-label">09:50｜</span><span class="time-detail">若選擇搭計程車，車程約 5–10 分鐘，可在這個時間左右從住宿出發。</span></p>
+<p class="time-row"><span class="time-label">10:00–10:15｜</span><span class="time-detail">抵達碼頭、取票或掃碼、確認登船位置並準備上船。</span></p>
+<p class="time-row"><span class="time-label">10:15–10:45｜</span><span class="time-detail">Red Cruise：Bowness → Ambleside，欣賞 Windermere 北段湖景與山丘。</span></p>
+<p class="time-row"><span class="time-label">10:45–11:00｜</span><span class="time-detail">在 Ambleside Waterhead Pier 短暫休息，準備搭回程船，不進市區。</span></p>
+<p class="time-row"><span class="time-label">11:00–11:30｜</span><span class="time-detail">Red Cruise：Ambleside → Bowness。</span></p>
+<p class="time-row"><span class="time-label">11:30–12:05｜</span><span class="time-detail">從 Bowness Pier 返回 Windermere 村中心：步行約 30–35 分鐘；若搭計程車約 5–10 分鐘。搭計程車可多留一些午餐時間。</span></p>
+<p class="time-row"><span class="time-label">12:05–12:25｜</span><span class="time-detail">在住宿或車站附近簡單吃午餐，或購買三明治、沙拉等外帶食物帶上火車。</span></p>
+<p class="time-row"><span class="time-label">12:25–12:30｜</span><span class="time-detail">回 Autumn Leaves Guest House 領取行李。</span></p>
+<p class="time-row"><span class="time-label">12:30–12:40｜</span><span class="time-detail">步行前往 Windermere 火車站；住宿與車站很近，約 10 分鐘即可抵達。</span></p>
+<p class="time-row"><span class="time-label">12:40–13:00｜</span><span class="time-detail">抵達車站、確認月台並準備上車。</span></p>
+<p class="time-row"><span class="time-label">13:07–16:18｜</span><span class="time-detail">搭火車前往 Edinburgh，途中轉車兩次。</span></p>
+<p class="time-row"><span class="time-label">16:18–16:40｜</span><span class="time-detail">抵達 Edinburgh Waverley，步行前往 Motel One Edinburgh-Royal，寄放行李或辦理入住。</span></p>
+</div><div class="journey">
 <p class="journey-title">🚆 已預訂交通</p>
 <p class="journey-route">Windermere → Edinburgh</p>
 <div class="journey-grid">
@@ -392,6 +432,9 @@
 <p class="journey-note">備註：第一段沒有指定座位，後兩段已劃位。上午與午餐時間可繼續留在湖區。</p>
 </div>
 <div class="transport purple"><p><b>🍽️ 已訂位晚餐</b></p><p>David Bann Restaurant｜18:30–20:30｜已訂位</p></div>
+
+
+
 <div class="transport"><p><b>📍 建議路線</b></p><p>Edinburgh Waverley（愛丁堡車站）→ Motel One Edinburgh-Royal → Royal Mile（皇家一英里）→ Victoria Street（維多利亞街）。</p></div>
 <div class="transport"><p><b>一定要去</b></p><p>Royal Mile（皇家一英里）：愛丁堡舊城最重要的主街。</p><p>Victoria Street（維多利亞街）：彩色彎曲街道，很適合拍照。</p></div>
 </section>
